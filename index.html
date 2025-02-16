@@ -3,120 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneSuite - Gestion des employés</title>
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Import Tailwind -->
+    <title>OneSuite - Gestion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white">
-
+<body class="min-h-screen bg-white">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
-        <div class="container mx-auto px-6 flex justify-between items-center h-20">
-            <div class="text-3xl font-bold tracking-tight">OneSuite</div>
-            <div class="hidden md:flex space-x-12 text-gray-600">
-                <a href="#features" class="hover:text-black transition-colors">Fonctionnalités</a>
-                <a href="#pricing" class="hover:text-black transition-colors">Tarifs</a>
-                <a href="#contact" class="hover:text-black transition-colors">Contact</a>
-            </div>
-            <div class="flex items-center">
-                <a href="login.html" class="hidden md:block hover:text-black transition-colors mr-8">
-                    Se connecter
-                </a>
-                <a href="login.html" class="bg-black text-white px-8 py-3 rounded-xl hover:bg-gray-900 transition-all transform hover:scale-105">
-                    Commencer
-                </a>
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex flex-col items-end">
+                    <div class="text-3xl font-bold tracking-tight">OneSuite</div>
+                    <div class="text-sm text-gray-500 pr-2">Gestion</div>
+                </div>
+                <div class="hidden md:flex space-x-12 text-gray-600">
+                    <a href="#features" class="hover:text-black transition-colors">Fonctionnalités</a>
+                    <a href="#pricing" class="hover:text-black transition-colors">Tarifs</a>
+                    <a href="#contact" class="hover:text-black transition-colors">Contact</a>
+                </div>
+                <div class="flex items-center">
+                    <button class="hidden md:block hover:text-black transition-colors mr-8">
+                        Se connecter
+                    </button>
+                    <button class="bg-black text-white px-8 py-3 rounded-xl hover:bg-gray-900 transition-all transform hover:scale-105">
+                        Commencer
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-40 pb-24 bg-gradient-to-b from-gray-50 to-white text-center">
+    <section class="pt-40 pb-24 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6">
-            <span class="inline-block px-4 py-2 bg-gray-100 rounded-full text-sm font-medium mb-6">
-                La solution de gestion tout-en-un
-            </span>
-            <h1 class="text-7xl font-bold mb-8 tracking-tight">
-                Simplifiez votre
-                <span class="block bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-                    gestion d'entreprise
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-block px-4 py-2 bg-gray-100 rounded-full text-sm font-medium mb-6">
+                    La solution de gestion tout-en-un
                 </span>
-            </h1>
-            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                Une plateforme intuitive qui réunit la gestion de vos employés et de vos plannings 
-                pour une productivité optimale.
-            </p>
-            <a href="login.html" class="bg-black text-white px-12 py-5 rounded-xl text-lg font-medium 
-                          hover:bg-gray-900 transition-all hover:scale-105 transform shadow-lg">
-                Démarrer maintenant
-            </a>
+                <h1 class="text-7xl font-bold mb-8 leading-tight tracking-tight">
+                    Simplifiez votre
+                    <span class="block bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+                        gestion d'entreprise
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto">
+                    Une plateforme intuitive qui réunit la gestion de vos employés et de vos plannings 
+                    pour une productivité optimale.
+                </p>
+                <button class="bg-black text-white px-12 py-5 rounded-xl text-lg font-medium 
+                             hover:bg-gray-900 transition-all hover:scale-105 transform 
+                             shadow-lg hover:shadow-xl flex items-center mx-auto">
+                    <span>Démarrer maintenant</span>
+                    <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-24">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20">
-            <!-- Gestion des employés -->
-            <div>
-                <h2 class="text-4xl font-bold mb-6">Gestion des Employés Simplifiée</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    Une suite complète d'outils pour gérer efficacement vos ressources humaines.
-                </p>
-                <div class="space-y-6">
-                    <div class="p-6 rounded-xl bg-gray-100">
-                        <h3 class="text-xl font-semibold mb-2">Profils Complets</h3>
-                        <p class="text-gray-600">Gérez tous les aspects des employés : informations personnelles, documents, historique.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-gray-100">
-                        <h3 class="text-xl font-semibold mb-2">Gestion des Absences</h3>
-                        <p class="text-gray-600">Suivez et gérez facilement les congés et absences avec validation simplifiée.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Gestion du planning -->
-            <div>
-                <h2 class="text-4xl font-bold mb-6">Organisation Intelligente</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    Optimisez la gestion de vos plannings avec des outils puissants et flexibles.
-                </p>
-                <div class="space-y-6">
-                    <div class="p-6 rounded-xl bg-gray-100">
-                        <h3 class="text-xl font-semibold mb-2">Planning Dynamique</h3>
-                        <p class="text-gray-600">Interface intuitive pour créer et modifier vos plannings.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-gray-100">
-                        <h3 class="text-xl font-semibold mb-2">Gestion des Équipes</h3>
-                        <p class="text-gray-600">Optimisez la répartition du travail selon les compétences.</p>
+    <section class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <!-- Module RH -->
+                <div class="space-y-12">
+                    <div class="max-w-md">
+                        <span class="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                            Module RH
+                        </span>
+                        <h2 class="text-4xl font-bold mt-3 mb-6">
+                            Gestion des Employés
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            Une suite complète d'outils pour gérer efficacement vos ressources humaines.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="py-24 bg-black text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8">
-                Prêt à transformer votre gestion d'entreprise ?
-            </h2>
-            <a href="login.html" class="bg-white text-black px-12 py-5 rounded-xl text-lg font-medium 
-                          hover:bg-gray-100 transition-all hover:scale-105 transform shadow-lg">
-                Commencer gratuitement
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 text-center text-gray-600">
-        <div class="container mx-auto px-6">
-            <p class="text-lg font-semibold">OneSuite</p>
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="hover:text-black">Politique de confidentialité</a>
-                <a href="#" class="hover:text-black">Mentions légales</a>
-                <a href="#" class="hover:text-black">Contact</a>
-            </div>
-            <p class="mt-6">© 2025 OneSuite. Tous droits réservés.</p>
-        </div>
-    </footer>
-
 </body>
 </html>
