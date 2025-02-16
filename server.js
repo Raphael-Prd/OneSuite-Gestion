@@ -2,13 +2,27 @@ const express = require('express');
 const argon2 = require('argon2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const db = require('./database');
+const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// ✅ Route d'inscription
+// Connexion à la base de données SQLite
+const db = new sqlite3.Database('./users.db', (err) => {
+    if (err) {
+        console.error(err.message);
+    } else {
+        console.log('Connecté à la base de données SQLite.');
+        db.run(`CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email TEXT UNIQUE,
+            password TEXT
+        )`);
+    }
+});
+
+// Route d'inscription
 app.post('/register', async (req, res) => {
     const { email, password } = req.body;
 
@@ -25,7 +39,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
-// ✅ Route de connexion
+// Route de connexion
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
@@ -47,7 +61,7 @@ app.post('/login', (req, res) => {
     });
 });
 
-// ✅ Démarrer le serveur
+// Démarrer le serveur
 app.listen(5000, () => {
     console.log("Serveur backend démarré sur http://localhost:5000");
 });

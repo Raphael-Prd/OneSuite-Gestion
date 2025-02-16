@@ -13,7 +13,7 @@
             const password = document.getElementById("password").value;
 
             try {
-                const response = await fetch("https://onesuite-gestion.onrender.com", { // Remplace par ton URL Render
+                const response = await fetch("https://onesuite-backend.onrender.com/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email, password })
