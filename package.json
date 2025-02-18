@@ -1,17 +1,10 @@
 {
-  "dependencies": {
-    "argon2": "^0.41.1",
-    "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "sqlite3": "^5.1.7"
-  },
-  "name": "onesuite-gestion",
+  "name": "project",
   "version": "1.0.0",
-  "main": "database.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,9 +13,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Raphael-Prd/OneSuite-Gestion/issues"
   },
   "homepage": "https://github.com/Raphael-Prd/OneSuite-Gestion#readme",
-  "description": ""
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
